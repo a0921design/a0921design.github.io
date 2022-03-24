@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Works - Consistency</title>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'gwr7thl',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  </head>
+  <body id="works">
+    <header>
+      <h1><a href="/">Consistency</a></h1>
+      <div id="btn">
+        <span class="line" id="line1"></span>
+        <span class="line" id="line2"></span>
+        <span class="line" id="line3"></span>
+      </div>
+    </header>
+    <nav id="menu">
+      <ul>
+        <li><a href="/">Index</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="me.html">Me</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Works</h2>
+        <p>こちらから作品をご覧いただけます。</p>
+      </section>
+      <div id="container">
+      </div>
+    </main>
+    <footer>
+      <p>©2022 Akinosuke Takemura</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 var defaultQueryList = {
-	sp: matchMedia("(max-width: 599px"),
+	sp: matchMedia("(max-width: 599px)"),
 	pc: matchMedia("(min-width: 600px)")
 }
 

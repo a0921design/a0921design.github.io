@@ -3,7 +3,7 @@ const breakPoint = 599;
 
   window.addEventListener('load',()=>{
     if( breakPoint > window.innerWidth){
-      resizeFlag = false;
+      resizeFlag = true;
     }else{
       resizeFlag = true;
     }
@@ -14,7 +14,7 @@ const breakPoint = 599;
     window.addEventListener('resize',()=>{
       if( breakPoint > window.innerWidth && resizeFlag){
         window.location.reload();
-        resizeFlag = false;
+        resizeFlag = true;
       } 
       else if ( breakPoint <= window.innerWidth && !(resizeFlag)) {
         resizeFlag = true;

@@ -360,7 +360,7 @@ footer {
   width: 100%;
 }
 
-#me ul {
+#me main ul {
   list-style: circle;
   list-style-position: inside;
 }

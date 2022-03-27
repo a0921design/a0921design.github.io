@@ -17,6 +17,7 @@ a {
 
 a:hover {
   opacity: 0.5;
+  transition: .5s;
 }
 
 ul {
@@ -49,7 +50,7 @@ h3 {
 
 /* ロード画面 */
 
-/* 背景　*/
+/* 背景 */
 
 #load {
   display: flex;
@@ -68,12 +69,14 @@ h3 {
 /* アニメーション */
 
 #load .circle {
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   color: #fff;
-  animation: rotate linear 1.2s infinite;
+  animation: rotate linear 1s infinite;
 }
+
+/* 回転キーフレーム */
 
 @keyframes rotate {
 
@@ -90,7 +93,7 @@ h3 {
 
   50% {
     transform: rotate(180deg);
-    border-bottom: 6px solid #fff;
+    border-bottom: 1px solid #fff;
     opacity: 0;
   }
 
@@ -119,7 +122,6 @@ h3 {
 
 header {
   height: 150px;
-  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -131,6 +133,7 @@ h1 {
   font-weight: 500;
   font-size: 48px;
   margin-left: 100px;
+  transition: .7s;
 }
 
 /* メニューボタン */
@@ -147,19 +150,24 @@ h1 {
   margin: 57px 100px 0 0;
 }
 
+#btn:hover {
+  opacity: 0.5;
+  transition: .5s;
+}
+
 .line {
   display: block;
   position: absolute;
   width: 36px;
   height: 2px;
-  background-color: #333;
+  background: #333;
   transition: .7s;
   border-radius: 6px;
   right: 0;
 }
 
 #index .line {
-  background-color: #fff;
+  background: #fff;
 }
 
 /* ラインの位置調整 */
@@ -201,14 +209,13 @@ h1 {
 nav {
   display: flex;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   background-color: #000;
   top: -100%;
   left: 0;
   z-index: 90;
   transition: .7s;
-  visibility: hidden;
   opacity: 0;
 }
 
@@ -225,12 +232,11 @@ nav li a {
   color: #fff;
 }
 
-/* アニメーション */
+/* メニュー開閉 */
 
 .in{
   transform: translateY(100%);
   opacity: 1;
-  visibility: visible;
 }
 
 /* メインコンテンツ幅 */
@@ -243,6 +249,7 @@ main {
 /* フッター */
 
 footer {
+  width: 100%;
   margin-top: 50px;
   height: 100px;
   display: flex;
@@ -284,16 +291,35 @@ footer {
 
 #index footer {
   margin: 0;
-  width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
   color: #fff;
 }
 
-/* about */
-
 /* works */
+
+#container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+}
+
+#container .box {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2%;
+}
+
+.a {
+  width: 32%;
+}
+
+#container .box img {
+  max-width: 100%;
+}
 
 /* me */
 
@@ -327,12 +353,12 @@ footer {
 #me main {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 4%;
 }
 
 #me main img {
-  width: 80%;
-  max-width: 50%;
+  width: 40%;
+  transition: .2s;
 }
 
 #me h3 span {
@@ -341,7 +367,8 @@ footer {
 }
 
 .profile {
-  width: 100%;
+  width: 56%;
+  transition: .7s;
 }
 
 #me main ul {
@@ -369,10 +396,6 @@ footer {
   main {
     width: 90%;
     margin: 20px auto 0 auto;
-  }
-
-  section {
-    width: 100%;
   }
 
   #index .main {
@@ -452,6 +475,25 @@ footer {
     margin-left: 5%;
   }
 
+  /* works */
+
+  #container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  
+  #container .box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  
+  .a {
+    width: 100%;
+  }
+
   /* me */
 
   /* テスト要素
@@ -468,10 +510,16 @@ footer {
 
   #me main {
     flex-direction: column;
+    gap: 20px;
   }
 
   #me main img {
     border-radius: 50%;
+    width: 50%;
+  }
+
+  .profile {
+    width: 100%;
   }
 
   #me section {
@@ -491,13 +539,6 @@ footer {
 
   footer {
     height: 80px;
-  }
-
-  #index footer {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
   }
 
 }

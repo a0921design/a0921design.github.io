@@ -295,22 +295,6 @@ footer {
 
 /* works */
 
-#works #container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 100%;
-}
-
-#works #container .box {
-  flex-grow: 33%;
-  max-width: 100%;
-}
-
-#works #container img {
-  max-width: 100%;
-}
-
 /* me */
 
 /* テスト要素

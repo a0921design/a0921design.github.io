@@ -31,6 +31,7 @@ p {
 
 section {
   margin-bottom: 20px;
+  transition: .7s;
 }
 
 h2 {
@@ -242,7 +243,6 @@ nav li a {
 /* メインコンテンツ幅 */
 
 main {
-  max-width: 1720px;
   margin: 50px 100px 0 100px;
 }
 
@@ -300,26 +300,34 @@ footer {
 /* works */
 
 #container {
-  max-width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  column-gap: 20px;
-}
-
-#container .box01 {
-  max-width: 742px;
-}
-
-#container .box02 {
-  max-width: 958px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
+  gap: 1%;
+  transition: .5s;
 }
 
 #container img {
   max-width: 100%;
 }
+
+#container .works_col01 {
+  width: 47%;
+}
+
+#container .works_col02 {
+  display: flex;
+  width: 52%;
+  gap: 3%;
+  flex-direction: column;
+}
+
+.design {
+  height: 50%;
+}
+
+.photo {
+  height:48%;
+}
+
 
 /* me */
 
@@ -394,8 +402,7 @@ footer {
   /* コンテンツ部分 */
 
   main {
-    width: 90%;
-    margin: 20px auto 0 auto;
+    margin: 20px 5% 0 5%;
   }
 
   #index .main {
@@ -462,8 +469,7 @@ footer {
   /* index */
 
   #index main {
-    width: 90%;
-    margin: 48px auto 0 auto;
+    margin: 48px 5% 0 5%;
   }
 
   #index main h2 {
@@ -481,7 +487,20 @@ footer {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    row-gap: 20px;
+    gap: 20px;
+  }
+
+  #container .works_col01 {
+    width: 100%;
+  }
+  
+  #container .works_col02 {
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .design,.photo {
+    height: auto;
   }
 
   /* me */
@@ -505,8 +524,10 @@ footer {
 
   #me main img {
     border-radius: 50%;
-    width: 50%;
+    width: 200px;
   }
+
+  /* 縦スクロール用にコンテンツ幅修正 */
 
   .profile {
     width: 100%;

@@ -302,28 +302,28 @@ footer {
 #container {
   max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  column-gap: 20px;
+}
+
+#container .box01 {
+  max-width: 742px;
+}
+
+#container .box02 {
+  max-width: 958px;
+  display: flex;
+  flex-direction: column;
   row-gap: 20px;
 }
 
-#container .box {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2%;
-}
-
-.a {
-  width: 32%;
-}
-
-#container .box img {
+#container img {
   max-width: 100%;
 }
 
 /* me */
 
-/* テスト要素
+/* テスト要素 meのページは全体的に傾きを使ったレイアウトにする予定
 
 #me header {
   background-color: #000;
@@ -482,16 +482,6 @@ footer {
     flex-wrap: nowrap;
     flex-direction: column;
     row-gap: 20px;
-  }
-  
-  #container .box {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-  }
-  
-  .a {
-    width: 100%;
   }
 
   /* me */

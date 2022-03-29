@@ -11,11 +11,13 @@ const closeBtn01 = document.getElementById('close01');
 const closeBtn02 = document.getElementById('close02');
 const closeBtn03 = document.getElementById('close03');
 
-// レスポンシブ対応 //
+// ブレイクポイント //
 
 const windowWidth = window.innerWidth;
 
 const modalBreakPoint = 599;
+
+// 599px以下での挙動(スマートフォンレイアウト) //
 
 if ( windowWidth <= modalBreakPoint ) {
 
@@ -63,6 +65,8 @@ if ( windowWidth <= modalBreakPoint ) {
   } ;
 
 }
+
+// 600px以上での挙動 //
 
 else {
   // ボタンクリックで各要素表示 //

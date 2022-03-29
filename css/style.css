@@ -329,16 +329,15 @@ footer {
   flex-direction: column;
 }
 
-/* ポップアップ表示 */
+/* 作品詳細表示 */
 
 /* コンテンツ */
 
-#modal {
+.modal {
   position: fixed;
   height: 100%;
   width: 50%;
   top: 50%;
-  right: -100%;
   transform: translateY(-50%);
   background-color: #fff;
   z-index: 1000;
@@ -351,23 +350,31 @@ footer {
   justify-content: space-evenly;
 }
 
-#modal img {
+#modal01 {
+  right: -100%;
+}
+
+#modal02,#modal03 {
+  left: -100%;
+}
+
+.modal img {
   max-width: 50%;
   margin: 0 auto;
 }
 
-#modal section {
+.modal section {
   margin: 0 5%;
   text-align: center;
 }
 
 /* 閉じるボタン */
 
-#close {
+.close {
   cursor: pointer;
 }
 
-#close:hover {
+.close:hover {
   opacity: 0.5;
 }
 
@@ -559,6 +566,30 @@ footer {
   
   .design,.photo {
     height: auto;
+  }
+
+  /* 作品詳細表示 */
+
+  /* コンテンツ */
+
+  .modal {
+    height: 80%;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .modal img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .modal section {
+    margin: 0 5%;
+    text-align: center;
   }
 
   /* me */

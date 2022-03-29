@@ -11,47 +11,104 @@ const closeBtn01 = document.getElementById('close01');
 const closeBtn02 = document.getElementById('close02');
 const closeBtn03 = document.getElementById('close03');
 
-// ボタンクリックで各要素表示 //
+// レスポンシブ対応 //
 
-openBtn01.onclick = function() {
-  modal01.style.cssText = 'visibility: visible; opacity: 1; right: 0;';
-  overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
-};
+const windowWidth = window.innerWidth;
 
-openBtn02.onclick = function() {
-  modal02.style.cssText = 'visibility: visible; opacity: 1; left: 0;';
-  overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
-};
+const modalBreakPoint = 599;
 
-openBtn03.onclick = function() {
-  modal03.style.cssText = 'visibility: visible; opacity: 1; left: 0;';
-  overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
-};
+if ( windowWidth <= modalBreakPoint ) {
 
-// 閉じるボタンで閉じる //
+  // ボタンクリックで各要素表示 //
 
-closeBtn01.onclick = function() {
+  openBtn01.onclick = function() {
+    modal01.style.cssText = 'visibility: visible; opacity: 1; bottom: 0;';
+    overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
+  };
+  
+  openBtn02.onclick = function() {
+    modal02.style.cssText = 'visibility: visible; opacity: 1; bottom: 0;';
+    overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
+  };
+  
+  openBtn03.onclick = function() {
+    modal03.style.cssText = 'visibility: visible; opacity: 1; bottom: 0;';
+    overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
+  };
+
+  // 閉じるボタンで閉じる //
+
+  closeBtn01.onclick = function() {
+    modal01.style.cssText = 'visibility: hidden; opacity: 0; bottom: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  };
+  
+  closeBtn02.onclick = function() {
+    modal02.style.cssText = 'visibility: hidden; opacity: 0; bottom: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  };
+  
+  closeBtn03.onclick = function() {
+    modal03.style.cssText = 'visibility: hidden; opacity: 0; bottom: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  };
+
+  // オーバーレイで閉じる //
+
+  overRay.onclick = function() {
+    modal01.style.cssText = 'visibility: hidden; opacity: 0; bottom: -100%;';
+    modal02.style.cssText = 'visibility: hidden; opacity: 0; bottom: -100%;';
+    modal03.style.cssText = 'visibility: hidden; opacity: 0; bottom: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  } ;
+
+}
+
+else {
+  // ボタンクリックで各要素表示 //
+
+  openBtn01.onclick = function() {
+    modal01.style.cssText = 'visibility: visible; opacity: 1; right: 0;';
+    overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
+  };
+  
+  openBtn02.onclick = function() {
+    modal02.style.cssText = 'visibility: visible; opacity: 1; left: 0;';
+    overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
+  };
+  
+  openBtn03.onclick = function() {
+    modal03.style.cssText = 'visibility: visible; opacity: 1; left: 0;';
+    overRay.style.cssText = 'visibility: visible; opacity: 0.8;';
+  };
+
+  // 閉じるボタンで閉じる //
+
+  closeBtn01.onclick = function() {
+    modal01.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  };
+  
+  closeBtn02.onclick = function() {
+    modal02.style.cssText = 'visibility: hidden; opacity: 0; left: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  };
+  
+  closeBtn03.onclick = function() {
+    modal03.style.cssText = 'visibility: hidden; opacity: 0; left: -100%;';
+    overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  };
+
+  // オーバーレイで閉じる //
+
+  overRay.onclick = function() {
   modal01.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
+  modal02.style.cssText = 'visibility: hidden; opacity: 0; left: -100%;';
+  modal03.style.cssText = 'visibility: hidden; opacity: 0; left: -100%;';
   overRay.style.cssText = 'visibility: hidden; opacity: 0;';
+  } ;
 }
 
-closeBtn02.onclick = function() {
-  modal02.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
-  overRay.style.cssText = 'visibility: hidden; opacity: 0;';
-}
 
-closeBtn03.onclick = function() {
-  modal03.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
-  overRay.style.cssText = 'visibility: hidden; opacity: 0;';
-}
-
-// オーバーレイで閉じる //
-
-overRay.onclick = function() {
-  modal01.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
-  modal02.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
-  modal03.style.cssText = 'visibility: hidden; opacity: 0; right: -100%;';
-  overRay.style.cssText = 'visibility: hidden; opacity: 0;';
-} 
   
 /* Copyright 2022 aki0921 */

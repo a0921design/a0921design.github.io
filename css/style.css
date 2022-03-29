@@ -299,6 +299,8 @@ footer {
 
 /* works */
 
+/* アイテム配置 */
+
 #container {
   display: flex;
   gap: 2%;
@@ -307,6 +309,12 @@ footer {
 
 #container img {
   max-width: 100%;
+}
+
+#container img:hover {
+  opacity: 0.5;
+  transition: .5s;
+  cursor: pointer;
 }
 
 #container .works_col01 {
@@ -319,6 +327,64 @@ footer {
   width: 52%;
   justify-content: space-between;
   flex-direction: column;
+}
+
+/* ポップアップ表示 */
+
+/* コンテンツ */
+
+#modal {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#modal img {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+#modal section {
+  margin: 0 5%;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+
+#close {
+  cursor: pointer;
+}
+
+#close:hover {
+  opacity: 0.5;
+}
+
+/* 背景オーバーレイ */
+
+#overray {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  opacity: 0;
+  z-index: 999;
+  visibility: hidden;
+  transition: .5s;
 }
 
 /* me */

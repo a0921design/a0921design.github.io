@@ -42,17 +42,30 @@
     <main>
       <section>
         <h2>Works</h2>
-        <p>こちらから作品をご覧いただけます。</p>
+        <p>こちらから作品をご覧いただけます。作品リンクは製作中。</p>
       </section>
       <div id="container">
         <div class="works_col01">
-          <a href=""><img src="img/01.jpg" alt="" class="web"></a>
+          <img src="img/01.jpg" alt="" class="web" id="test01">
         </div>
         <div class="works_col02">
-          <a href=""><img src="img/02.jpg" alt="" class="design"></a>
-          <a href=""><img src="img/03.jpg" alt="" class="photo"></a>
+          <img src="img/02.jpg" alt="" class="design" id="test02">
+          <img src="img/03.jpg" alt="" class="photo" id="test03">
         </div>
       </div>
+      <div id="modal">
+        <img src="img/01.jpg" alt="">
+        <section>
+          <h2>作品名</h2>
+          <p>作品の説明</p>
+        </section>
+        <div id="close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+          </svg>
+        </div>
+      </div>
+      <div id="overray"></div>
     </main>
     <footer>
       <p>©2022 Akinosuke Takemura</p>
@@ -60,5 +73,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/load.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

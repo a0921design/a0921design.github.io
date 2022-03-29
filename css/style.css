@@ -502,7 +502,9 @@ footer {
     font-size: 18px;
   }
 
-  /* メニューボタンリサイズ */
+  /* メニューリサイズ */
+
+  /* ボタン */
 
   #btn {
     margin-top: 26px;
@@ -530,6 +532,12 @@ footer {
   
   .line3 {
     transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* 文字サイズ調整 */
+
+  nav li a {
+    font-size: 14px;
   }
 
   /* index */

@@ -304,7 +304,7 @@ footer {
 
 #container {
   display: flex;
-  gap: 2%;
+  gap: 20px;
   transition: .5s;
 }
 
@@ -319,30 +319,34 @@ footer {
 }
 
 #container .works_col01 {
-  width: 47%;
+  width: 49%;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #container .works_col02 {
   display: flex;
-  width: 52%;
+  width: 49%;
   justify-content: space-between;
   flex-direction: column;
+  gap: 20px;
 }
 
 /* 作品詳細表示 */
 
 /* コンテンツ */
 
-.modal {
+.modalLeft {
   position: fixed;
   height: 100%;
   width: 50%;
   top: 50%;
+  right: -100%;
   transform: translateY(-50%);
   background-color: #fff;
   z-index: 1000;
-  visibility: hidden;
   opacity: 0;
   transition: .5s;
   display: flex;
@@ -352,20 +356,42 @@ footer {
   text-align: center;
 }
 
-#modal01 {
-  right: -100%;
-}
-
-#modal02,#modal03 {
+.modalRight {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  top: 50%;
   left: -100%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  z-index: 1000;
+  opacity: 0;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
-.modal img {
+.modalLeft img,.modalRight img {
   max-width: 50%;
 }
 
-.modal section {
+.modalLeft section,.modalRight section {
   margin: 0 5%;
+}
+
+/* 表示 */
+
+.showLeft {
+  right: 0;
+  opacity: 1;
+}
+
+.showRight {
+  left: 0;
+  opacity: 1;
 }
 
 /* 閉じるボタン */
@@ -392,6 +418,11 @@ footer {
   z-index: 999;
   visibility: hidden;
   transition: .5s;
+}
+
+.showOverray {
+  visibility: visible;
+  opacity: 0.8;
 }
 
 /* me */
@@ -557,10 +588,7 @@ footer {
   /* works */
 
   #container {
-    display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    gap: 20px;
   }
 
   #container .works_col01 {
@@ -569,38 +597,26 @@ footer {
   
   #container .works_col02 {
     width: 100%;
-    gap: 20px;
-  }
-  
-  .design,.photo {
-    height: auto;
   }
 
   /* 作品詳細表示 */
 
-  /* コンテンツ */
-
-  .modal {
+  .modalLeft,.modalRight {
+    position: fixed;
     height: 80%;
     width: 100%;
     top: auto;
-    bottom: -100%;
-    transform: translateY(0);
-  }
-  
-  .modal img {
-    max-width: 80%;
-  }
-
-  #modal01 {
     left: 50%;
     right: auto;
+    bottom: -100%;
     transform: translateX(-50%);
   }
   
-  #modal02,#modal03 {
-    left: 50%;
-    transform: translateX(-50%);
+  /* 表示 */
+  
+  .showLeft,.showRight {
+    bottom: 0;
+    opacity: 1;
   }
 
   /* me */

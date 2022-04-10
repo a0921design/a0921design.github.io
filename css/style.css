@@ -427,33 +427,6 @@ footer {
 
 /* me */
 
-/* テスト要素 meのページは全体的に傾きを使ったレイアウトにする予定
-
-#me header {
-  background-color: #000;
-  transform: skewY(-3deg);
-  height: 300px;
-  display: block;
-  margin-top: -70px;
-}
-
-#me h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 51px;
-}
-
-#me h1 a {
-  color: #fff;
-}
-
-#me #btn .line {
-  background-color: #fff;
-}
-
-    テスト要素ここまで */
-
 #me main {
   display: flex;
   align-items: center;

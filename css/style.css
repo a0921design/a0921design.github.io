@@ -374,6 +374,35 @@ footer {
   text-align: center;
 }
 
+#conceptWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#conceptWindow section h2,#conceptWindow p {
+  color: #fff;
+  border: none;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+#conceptWindow section {
+  margin: 0;
+}
+
 .modalLeft img,.modalRight img {
   max-width: 100%;
 }
@@ -381,6 +410,8 @@ footer {
 .modalLeft section,.modalRight section {
   margin: 0 5%;
 }
+
+
 
 /* 表示 */
 
@@ -587,6 +618,14 @@ footer {
 
   .modalLeft img,.modalRight img {
     max-width: 60%;
+  }
+
+  #conceptWindow {
+    width: 100%;
+  }
+
+  #conceptWindow p {
+    font-size: 12px;
   }
   
   /* 表示 */

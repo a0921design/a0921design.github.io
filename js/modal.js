@@ -5,12 +5,12 @@ document.getElementById('uuid').onclick = function() {
   document.getElementById('overray').style.cssText = ('opacity: 0.8; visibility:visible;');
 };
 
-document.getElementById('kal').onclick = function() {
+document.getElementById('emosic').onclick = function() {
   document.getElementById('modal02').classList.add('showLeft');
   document.getElementById('overray').style.cssText = ('opacity: 0.8; visibility:visible;');
 };
 
-document.getElementById('test03').onclick = function() {
+document.getElementById('kal').onclick = function() {
   document.getElementById('modal03').classList.add('showRight');
   document.getElementById('overray').style.cssText = ('opacity: 0.8; visibility:visible;');
 };

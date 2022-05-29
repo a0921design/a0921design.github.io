@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <meta name="robots" content="noindex,nofollow">
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/destyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Consistency</title>
     <script>
       (function(d) {
         var config = {
-          kitId: 'gwr7thl',
+          kitId: 'hni2mrc',
           scriptTimeout: 3000,
           async: true
         },
@@ -24,41 +24,62 @@
       <div class="circle">
       </div>
     </div>
-    <video autoplay muted loop playsinline class="v_breakpoint">
-      <source type="video/mp4" data-src="movie/planet_sp.mp4" data-query="sp">
-      <source type="video/mp4" data-src="movie/planet_pc.mp4" data-query="pc">
-    </video>
     <header>
-      <h1><a href="/">Consistency</a></h1>
-      <div id="btn">
-        <span class="line" id="line1"></span>
-        <span class="line" id="line2"></span>
-        <span class="line" id="line3"></span>
+      <div class="headerWrap">
+        <h1 class="logoTxt"><a href="/">Consistency</a></h1>
+        <nav id="gNav">
+          <ul>
+            <li><a href="/works/">Works</a></li>
+            <li><a href="/me/">Me</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <nav id="menu">
-      <ul>
-        <li><a href="/">Index</a></li>
-        <li><a href="/works/">Works</a></li>
-        <li><a href="/me/">Me</a></li>
-      </ul>
-    </nav>
+    <div id="headline">
+      <div id="copy">
+        <div id="mainCopy">
+          Create designs<br>
+          that Colors are consistent.
+        </div>
+        <div id="subCopy">
+          人々やものの個性を貫き通したものづくりを。
+        </div>
+      </div>
+    </div>
     <main>
-      <h2 id="copy">
-        <a href="/works/">
-          The world is<br>
-          Made of<br>
-          Color
-        </a>
-      </h2>
     </main>
     <footer>
-      <p>©2022 Akinosuke Takemura</p>
+      <div class="navArea">
+        <div class="logoTxt">Consistency</div>
+        <div id="fNav">
+          <ul>
+            <li><a href="/">Top</a></li>
+            <li><a href="/works/">Works</a></li>
+            <li><a href="/me/">Me</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="copyright">
+        ©2022 Consistency All rights received.
+      </div>
     </footer>
-    <script src="js/load.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/video.js"></script>
-    <script src="js/reload.js"></script>
-    <script src="js/copy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+    <script>
+      VANTA.HALO({
+        el: "#headline",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        baseColor: 0x1fe197,
+        backgroundColor: 0xd20060,
+        amplitudeFactor: 0.50,
+        xOffset: 0.19,
+        size: 2
+      })
+      </script>
+    <script src="assets/js/load.js"></script>
   </body>
 </html>

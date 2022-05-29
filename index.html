@@ -29,10 +29,15 @@
         <h1 class="logoTxt"><a href="/">Consistency</a></h1>
         <nav id="gNav">
           <ul>
+            <li><a href="#purpose">Purpose</a></li>
             <li><a href="/works/">Works</a></li>
             <li><a href="/me/">Me</a></li>
           </ul>
         </nav>
+        <div id="navBtn" class="__bpSP">
+          <span id="line1"></span>
+          <span id="line2"></span>
+        </div>
       </div>
     </header>
     <div id="headline">
@@ -47,6 +52,49 @@
       </div>
     </div>
     <main>
+      <section id="purpose">
+        <h2>Purpose</h2>
+        <p>
+          この世界は数えきれない程の色で出来ています。<br>
+          赤や青といった色彩、人々やものの持つ個性。<br>
+          その個性を軸としたデザインは伝えたいことがより伝わると考えています。<br>
+          個性という色に重きを置き、その軸を一貫したものづくりをしたい。<br>
+          この目標から一貫性や調和といった意味をもつ「Consistency」という語をサイト名にしています。
+        </p>
+      </section>
+      <section>
+        <h2>Works</h2>
+        <ul class="worksWrap">
+          <li>
+            <a href="">
+              <img src="assets/img/ame.png" alt="">
+              <div class="linkTxt">Web design</div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="assets/img/iPhone XR 2D Case 1.png" alt="">
+              <div class="linkTxt">Other</div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Me</h2>
+        <h3>竹村陽之介/Akinosuke Takemura</h3>
+        <div class="profileImg">
+          <img src="assets/img/IMG_6765a.png" alt="">
+        </div>
+        <p>
+          京都コンピュータ学院でデザインとWeb制作について学んでいる学生です。<br>
+          デザインも出来るフロントエンドエンジニアを目指しています。
+        </p>
+        <div class="box">
+          <a href="">
+            <div class="linkTxt">View more</div>
+          </a>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="navArea">
@@ -77,9 +125,11 @@
         backgroundColor: 0xd20060,
         amplitudeFactor: 0.50,
         xOffset: 0.19,
-        size: 2
+        size: 2,
+        scaleMobile: 1
       })
       </script>
     <script src="assets/js/load.js"></script>
+    <script src="assets/js/menu.js"></script>
   </body>
 </html>

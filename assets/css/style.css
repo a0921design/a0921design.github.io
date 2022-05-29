@@ -84,9 +84,9 @@ html, body {
   width: 100%;
   background: #fff;
   color: #111;
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-family: source-han-sans-cjk-ja,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   line-height: 2em;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 2.5;
 }
@@ -139,16 +139,39 @@ header .headerWrap nav ul {
   gap: 40px;
 }
 
+@media screen and (max-width: 1024px) {
+  header .headerWrap {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .headerWrap h1 {
+    font-size: 4.688vw;
+  }
+  header .headerWrap nav {
+    font-family: bilo, sans-serif;
+    font-weight: 400;
+    font-size: 2.344vw;
+  }
+  header .headerWrap nav ul {
+    display: flex;
+    gap: 40px;
+  }
+}
+
 #headline {
   height: 100%;
   width: 100%;
-  background: url(../img/kikagaku7.png);
-  background-size: cover;
   position: relative;
   color: #fff;
 }
 
 #headline canvas {
+  width: 100%;
+  height: 100%;
   animation: bgAnime infinite 10s;
 }
 
@@ -162,20 +185,87 @@ header .headerWrap nav ul {
 }
 
 #headline #copy {
-  font-size: 4.74vw;
-  font-family: bilo, sans-serif;
-  font-weight: 200;
   margin: 0 auto;
   z-index: 2;
-  line-height: 1.5em;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 10%;
 }
 
+#headline #copy #mainCopy {
+  line-height: 1.5em;
+  font-size: 4.74vw;
+  font-family: bilo, sans-serif;
+  font-weight: 400;
+}
+
 #headline #copy #subCopy {
-  font-size: 16px;
+  line-height: 1.5em;
+  font-size: 1.25vw;
+}
+
+@media screen and (max-width: 1024px) {
+  #headline #copy {
+    margin-left: 5%;
+  }
+  #headline #copy #mainCopy {
+    font-size: 5.859vw;
+  }
+  #headline #copy #subCopy {
+    font-size: 2.344vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #headline #copy {
+    margin-left: 5%;
+  }
+  #headline #copy #mainCopy {
+    font-size: 8vw;
+  }
+  #headline #copy #subCopy {
+    font-size: 2.344vw;
+  }
+}
+
+main section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+main section h2 {
+  font-size: 60px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+main section h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+main section p {
+  margin-bottom: 40px;
+}
+
+main section .box a {
+  font-size: 36px;
+  font-family: bilo, sans-serif;
+  font-weight: 200;
+  border: 1px solid #111;
+  width: 240px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section .box a:hover {
+  opacity: 1;
+  background: #111;
+  color: #fff;
 }
 
 footer {
@@ -211,5 +301,66 @@ footer #copyright {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#index main section .worksWrap {
+  display: flex;
+}
+
+#index main section .worksWrap li {
+  width: 50%;
+  position: relative;
+}
+
+#index main section .worksWrap li img {
+  width: 100%;
+}
+
+#index main section .worksWrap li .linkTxt {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.125vw;
+  font-family: bilo, sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+
+#index main section .profileImg {
+  width: 400px;
+  margin: 0 auto 40px auto;
+}
+
+#index main section .profileImg img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #index main section .worksWrap {
+    flex-direction: column;
+  }
+  #index main section .worksWrap li {
+    width: 100%;
+  }
+  #index main section .worksWrap li .linkTxt {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.125vw;
+    font-family: bilo, sans-serif;
+    font-weight: 200;
+    color: #fff;
+  }
+  #index main section .profileImg {
+    width: 400px;
+    margin: 0 auto 40px auto;
+  }
+  #index main section .profileImg img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

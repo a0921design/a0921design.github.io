@@ -132,6 +132,7 @@ header .headerWrap h1 {
   font-size: 48px;
   font-weight: 500;
   font-family: urw-din, sans-serif;
+  letter-spacing: -0.04em;
 }
 
 header .headerWrap nav {
@@ -152,11 +153,6 @@ header .headerWrap nav ul {
   header .headerWrap h1 {
     font-size: 40px;
   }
-  header .headerWrap nav {
-    font-family: bilo, sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-  }
   header .headerWrap nav ul {
     gap: 20px;
   }
@@ -167,9 +163,6 @@ header .headerWrap nav ul {
     font-size: 6.667vw;
   }
   header .headerWrap nav {
-    font-family: bilo, sans-serif;
-    font-weight: 400;
-    font-size: 2.344vw;
     position: absolute;
     top: 50%;
     left: 50%;

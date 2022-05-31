@@ -85,10 +85,9 @@ html, body {
   background: #fff;
   color: #111;
   font-family: source-han-sans-cjk-ja,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
-  line-height: 1em;
+  line-height: 1;
   font-weight: 300;
   font-size: 16px;
-  line-height: 2.5;
 }
 
 html a, body a {
@@ -107,7 +106,7 @@ html h1, html h2, body h1, body h2 {
 }
 
 html p, body p {
-  line-height: 2em;
+  line-height: 2;
 }
 
 header {
@@ -131,12 +130,14 @@ header .headerWrap {
 
 header .headerWrap h1 {
   font-size: 48px;
+  font-weight: 500;
+  font-family: urw-din, sans-serif;
 }
 
 header .headerWrap nav {
-  font-family: bilo, sans-serif;
-  font-weight: 400;
-  font-size: 24px;
+  font-family: urw-din, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 header .headerWrap nav ul {
@@ -146,38 +147,24 @@ header .headerWrap nav ul {
 
 @media screen and (max-width: 1024px) {
   header .headerWrap {
-    height: 100%;
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   header .headerWrap h1 {
-    font-size: 4.688vw;
+    font-size: 40px;
   }
   header .headerWrap nav {
     font-family: bilo, sans-serif;
     font-weight: 400;
-    font-size: 2.344vw;
+    font-size: 18px;
   }
   header .headerWrap nav ul {
-    display: flex;
-    gap: 40px;
+    gap: 20px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  header .headerWrap {
-    height: 100%;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   header .headerWrap h1 {
-    font-size: 4.688vw;
+    font-size: 6.667vw;
   }
   header .headerWrap nav {
     font-family: bilo, sans-serif;
@@ -191,6 +178,9 @@ header .headerWrap nav ul {
     height: 100%;
     width: 100%;
     z-index: 999;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
   }
   header .headerWrap nav ul {
     flex-direction: column;
@@ -201,15 +191,15 @@ header .headerWrap nav ul {
     height: 100%;
   }
   header .headerWrap #navBtn {
-    width: 48px;
-    height: 48px;
+    width: 8vw;
+    height: 8vw;
     position: relative;
     display: flex;
     justify-content: center;
   }
   header .headerWrap #navBtn .line {
-    height: 2px;
-    width: 36px;
+    height: 0.333vw;
+    width: 6vw;
     background: #111;
     position: absolute;
   }
@@ -231,41 +221,47 @@ header .headerWrap nav ul {
   color: #fff;
 }
 
-#headline canvas {
-  width: 100%;
+#headline #bg {
   height: 100%;
+  width: 100%;
+}
+
+#headline #bg canvas {
   animation: bgAnime infinite 10s;
 }
 
 @keyframes bgAnime {
   0% {
-    filter: blur(8px) hue-rotate(0deg);
+    filter: hue-rotate(0deg);
   }
   100% {
-    filter: blur(8px) hue-rotate(360deg);
+    filter: hue-rotate(360deg);
   }
 }
 
 #headline #copy {
   margin: 0 auto;
-  z-index: 2;
+  z-index: 5;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 10%;
+  mix-blend-mode: difference;
 }
 
 #headline #copy #mainCopy {
-  line-height: 1.1em;
-  font-size: 4.74vw;
-  font-family: bilo, sans-serif;
-  font-weight: 500;
-  margin-bottom: 20px;
+  line-height: 1.3;
+  font-size: 66px;
+  font-family: urw-din, sans-serif;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 
 #headline #copy #subCopy {
-  font-size: 1.25vw;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 4px;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 1024px) {
@@ -274,9 +270,10 @@ header .headerWrap nav ul {
   }
   #headline #copy #mainCopy {
     font-size: 5.859vw;
+    margin-bottom: 1.953vw;
   }
   #headline #copy #subCopy {
-    font-size: 2.344vw;
+    font-size: 1.953vw;
   }
 }
 
@@ -303,23 +300,25 @@ main section {
 
 main section h2 {
   font-size: 60px;
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 
 main section h3 {
   font-size: 24px;
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 main section p {
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 main section .box a {
   font-size: 36px;
   font-family: bilo, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   border: 1px solid #111;
   width: 240px;
   height: 100px;
@@ -336,38 +335,56 @@ main section .box a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+  main {
+    padding: 4.883vw 0;
+  }
   main section {
-    padding: 50px 0;
+    padding: 4.883vw 0;
     text-align: center;
   }
   main section h2 {
-    font-size: 60px;
-    font-weight: 200;
-    margin-bottom: 40px;
+    font-size: 5.859vw;
+    margin-bottom: 3.906vw;
   }
   main section h3 {
-    font-size: 24px;
-    margin-bottom: 40px;
+    font-size: 2.344vw;
+    margin-bottom: 3.906vw;
   }
   main section p {
-    margin-bottom: 40px;
+    font-size: 1.563vw;
+    margin-bottom: 3.906vw;
   }
   main section .box a {
-    font-size: 36px;
-    font-family: bilo, sans-serif;
-    font-weight: 200;
-    border: 1px solid #111;
-    width: 240px;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 3.516vw;
+    width: 23.438vw;
+    height: 9.766vw;
   }
-  main section .box a:hover {
-    opacity: 1;
-    background: #111;
-    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 4.883vw 0;
+  }
+  main section {
+    padding: 4.883vw 0;
+    text-align: center;
+  }
+  main section h2 {
+    font-size: 5.859vw;
+    margin-bottom: 3.906vw;
+  }
+  main section h3 {
+    font-size: 2.344vw;
+    margin-bottom: 3.906vw;
+  }
+  main section p {
+    font-size: 1.563vw;
+    margin-bottom: 3.906vw;
+  }
+  main section .box a {
+    font-size: 3.516vw;
+    width: 40vw;
+    height: 16.667vw;
   }
 }
 
@@ -390,15 +407,16 @@ footer .navArea {
 
 footer .navArea .logoTxt {
   font-size: 36px;
+  font-weight: 500;
 }
 
 footer .navArea #fNav {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 footer .navArea #fNav ul {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 footer .navArea #fNav ul a {
@@ -414,50 +432,38 @@ footer #copyright {
 }
 
 @media screen and (max-width: 1024px) {
+  footer {
+    height: 39.063vw;
+  }
   footer .navArea {
     width: 90%;
+    height: 35.156vw;
   }
   footer .navArea .logoTxt {
-    font-size: 3.516vw;
+    font-size: 32px;
   }
   footer .navArea #fNav {
-    font-size: 2.344vw;
+    font-size: 18px;
   }
   footer .navArea #fNav ul {
-    gap: 40px;
+    gap: 20px;
+  }
+  footer #copyright {
+    height: 5.859vw;
+    font-size: 1.563vw;
   }
 }
 
 @media screen and (max-width: 600px) {
-  footer {
-    height: 400px;
-    font-family: bilo, sans-serif;
-    font-weight: 400;
-  }
   footer .navArea {
-    height: 360px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: baseline;
-  }
-  footer .navArea .logoTxt {
-    font-size: 36px;
-  }
-  footer .navArea #fNav {
-    font-size: 24px;
-  }
-  footer .navArea #fNav ul {
-    display: flex;
+    justify-content: center;
     gap: 40px;
   }
   footer #copyright {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 5.859vw;
+    font-size: 2.667vw;
   }
 }
 
@@ -482,7 +488,7 @@ footer #copyright {
   transform: translate(-50%, -50%);
   font-size: 3.125vw;
   font-family: bilo, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -503,49 +509,25 @@ footer #copyright {
     width: 100%;
   }
   #index main section .worksWrap li .linkTxt {
-    position: absolute;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3.125vw;
-    font-family: bilo, sans-serif;
-    font-weight: 200;
-    color: #fff;
+    font-size: 5.859vw;
   }
   #index main section .profileImg {
     width: 39.063vw;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 3.906vw auto;
   }
   #index main section .profileImg img {
     width: 100%;
+    border-radius: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  #index main section .worksWrap {
-    flex-direction: column;
-  }
-  #index main section .worksWrap li {
-    width: 100%;
-  }
   #index main section .worksWrap li .linkTxt {
-    position: absolute;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 3.125vw;
-    font-family: bilo, sans-serif;
-    font-weight: 200;
-    color: #fff;
   }
   #index main section .profileImg {
-    width: 300px;
-    margin: 0 auto 40px auto;
-  }
-  #index main section .profileImg img {
-    width: 100%;
+    width: 50vw;
+    margin: 0 auto 6.667vw auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -90,6 +90,12 @@ html, body {
   font-size: 16px;
 }
 
+@media screen and (max-width: 600px) {
+  html, body {
+    font-size: 2.667vw;
+  }
+}
+
 html a, body a {
   text-decoration: none;
   color: #111;
@@ -173,6 +179,9 @@ header .headerWrap nav ul a {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    height: 80px;
+  }
   header .headerWrap h1 {
     font-size: 6.667vw;
   }
@@ -188,6 +197,7 @@ header .headerWrap nav ul a {
     background: #fff;
     visibility: hidden;
     opacity: 0;
+    transition: .5s;
   }
   header .headerWrap nav ul {
     flex-direction: column;
@@ -197,27 +207,54 @@ header .headerWrap nav ul a {
     width: 100%;
     height: 100%;
   }
+  header .headerWrap nav ul a {
+    color: #111;
+  }
   header .headerWrap #navBtn {
     width: 8vw;
     height: 8vw;
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+    z-index: 9999;
+  }
+  header .headerWrap #navBtn:hover {
+    opacity: 0.5;
   }
   header .headerWrap #navBtn .line {
     height: 0.333vw;
     width: 6vw;
-    background: #111;
+    background: #fff;
     position: absolute;
+    transition: .5s;
   }
   header .headerWrap #navBtn #line1 {
     top: 21%;
   }
+  header .headerWrap #navBtn #line1.line1 {
+    background: #111;
+    transform: rotate(-405deg);
+    top: 48%;
+  }
   header .headerWrap #navBtn #line2 {
     top: 49%;
   }
+  header .headerWrap #navBtn #line2.line2 {
+    opacity: 0;
+  }
   header .headerWrap #navBtn #line3 {
     bottom: 19%;
+  }
+  header .headerWrap #navBtn #line3.line3 {
+    background: #111;
+    transform: rotate(405deg);
+    bottom: 49%;
+  }
+  header .headerWrap .show {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -281,10 +318,8 @@ header .headerWrap nav ul a {
     margin-left: 5%;
   }
   #headline #copy #mainCopy {
-    font-size: 8vw;
-  }
-  #headline #copy #subCopy {
-    font-size: 2.344vw;
+    font-size: 12.667vw;
+    margin-bottom: 5.333vw;
   }
 }
 
@@ -300,6 +335,13 @@ main section {
 main section h2 {
   font-size: 60px;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  main section h2 {
+    font-size: 10vw;
+    margin-bottom: 6.667vw;
+  }
 }
 
 main section h3 {
@@ -329,26 +371,23 @@ main section .box a:hover {
   color: #fff;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
   main {
     padding: 4.883vw 0;
   }
   main section {
     padding: 4.883vw 0;
   }
-  main section h2 {
-    margin-bottom: 3.906vw;
-  }
   main section h3 {
-    margin-bottom: 3.906vw;
+    margin-bottom: 6.667vw;
   }
   main section p {
-    margin-bottom: 3.906vw;
+    margin-bottom: 6.667vw;
   }
   main section .box a {
-    font-size: 3.516vw;
-    width: 23.438vw;
-    height: 9.766vw;
+    font-size: 6vw;
+    width: 40vw;
+    height: 13.333vw;
   }
 }
 
@@ -439,6 +478,12 @@ footer #copyright {
   font-weight: 500;
 }
 
+@media screen and (max-width: 600px) {
+  #index main section#purpose p .__enTxt {
+    font-size: 3.333vw;
+  }
+}
+
 #index main section .worksWrap {
   display: flex;
 }
@@ -470,6 +515,7 @@ footer #copyright {
 
 #index main section .profileImg img {
   width: 100%;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -488,13 +534,12 @@ footer #copyright {
   }
   #index main section .profileImg img {
     width: 100%;
-    border-radius: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
   #index main section .worksWrap li .linkTxt {
-    font-size: 3.125vw;
+    font-size: 10vw;
   }
   #index main section .profileImg {
     width: 50vw;

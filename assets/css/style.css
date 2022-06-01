@@ -321,6 +321,9 @@ header .headerWrap nav ul a {
     font-size: 12.667vw;
     margin-bottom: 5.333vw;
   }
+  #headline #copy #subCopy {
+    font-size: 3.333vw;
+  }
 }
 
 main {

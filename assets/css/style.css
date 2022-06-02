@@ -463,26 +463,27 @@ footer #copyright {
 
 @media screen and (max-width: 600px) {
   footer {
-    height: 49.333vw;
+    height: 46.667vw;
   }
   footer .navArea {
     width: 100%;
-    height: 29.333vw;
+    height: 35vw;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 8.167vw;
+    justify-content: flex-end;
   }
   footer .navArea .logoTxt {
     font-size: 5.333vw;
-    margin-top: 8.167vw;
+    margin-bottom: 8.333vw;
   }
   footer .navArea #fNav {
     font-size: 4vw;
+    margin-bottom: 8.333vw;
   }
   footer #copyright {
-    height: 20vw;
+    height: 11.667vw;
     font-size: 2.667vw;
+    align-items: flex-start;
   }
 }
 

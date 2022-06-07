@@ -90,6 +90,12 @@ html, body {
   font-size: 16px;
 }
 
+@media screen and (max-width: 1024px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   html, body {
     font-size: 2.667vw;
@@ -106,7 +112,7 @@ html a:hover, body a:hover {
   transition: .5s;
 }
 
-html h2, html h3, body h2, body h3 {
+html h2, html h3, html h4, body h2, body h3, body h4 {
   font-weight: 500;
 }
 
@@ -381,6 +387,7 @@ main section .box a:hover {
     padding: 4.883vw 0;
   }
   main section h3 {
+    font-size: 4vw;
     margin-bottom: 6.667vw;
   }
   main section p {
@@ -557,11 +564,13 @@ footer #copyright {
 
 #works main {
   padding-top: 125px;
-  padding-bottom: 0;
+  background: #eee;
 }
 
 #works main section {
-  padding: 25px;
+  padding: 25px 0;
+  margin: 0 auto;
+  width: 80%;
 }
 
 #works main section p {
@@ -570,8 +579,7 @@ footer #copyright {
 
 #works main section .row {
   display: flex;
-  justify-content: center;
-  gap: 2.083vw;
+  justify-content: space-between;
   transition: .5s;
 }
 
@@ -602,6 +610,9 @@ footer #copyright {
 }
 
 @media screen and (max-width: 1024px) {
+  #works main section {
+    width: 90%;
+  }
   #works main section .row {
     gap: 2.344vw;
   }
@@ -612,13 +623,14 @@ footer #copyright {
 
 @media screen and (max-width: 600px) {
   #works main {
-    padding-top: calc(80px + 8.333vw);
+    padding-top: calc(80px + 4.883vw);
+    width: 100%;
   }
   #works main section {
-    padding: 4.167vw;
+    padding: 4.883vw 0;
   }
   #works main section p {
-    margin-bottom: 4.167vw;
+    margin-bottom: 4.667vw;
   }
   #works main section .row {
     justify-content: center;
@@ -627,13 +639,13 @@ footer #copyright {
     gap: 20px;
   }
   #works main section .row:first-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 3.333vw;
   }
   #works main section .row li {
     width: 100%;
   }
   #works main section .row li .title {
-    margin-top: 20px;
+    margin-top: 3.333vw;
     text-align: center;
     font-weight: 500;
   }
@@ -641,10 +653,342 @@ footer #copyright {
     font-size: 3.333vw;
   }
   #works main section #web, #works main section #other {
-    padding: 4.167vw 0;
+    padding: 4.667vw 0;
   }
   #works main section #web h3, #works main section #other h3 {
     font-size: 6vw;
+  }
+}
+
+#me header {
+  background: #111;
+}
+
+#me main {
+  padding-top: 125px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#me main section:first-child {
+  padding-top: 25px;
+}
+
+#me main section#profile .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#me main section#profile .wrap .profileImg {
+  width: 39.583vw;
+  height: auto;
+}
+
+#me main section#profile .wrap .profileImg img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: 780px;
+}
+
+#me main section#profile .wrap .txt {
+  width: 37.5vw;
+  text-align: left;
+}
+
+#me main section#profile .wrap .txt h3 {
+  font-size: 28px;
+  margin-bottom: 3.333vw;
+}
+
+#me main section#profile .wrap .txt p {
+  margin-bottom: 3.333vw;
+}
+
+#me main section#profile .wrap .txt ul {
+  margin-bottom: 3.333vw;
+  font-weight: 400;
+}
+
+#me main section#profile .wrap .txt ul:last-child {
+  margin-bottom: 0;
+}
+
+#me main section#profile .wrap .txt ul.otherList li {
+  line-height: 2;
+}
+
+#me main section#profile .wrap .txt ul .__enTxt {
+  font-weight: 500;
+}
+
+#me main section#profile .wrap .txt ul h4 {
+  font-size: 24px;
+  margin-bottom: 3.333vw;
+}
+
+#me main section#like .likeList {
+  display: flex;
+  justify-content: space-between;
+}
+
+#me main section#like .likeList li {
+  text-align: left;
+  width: 25vw;
+}
+
+#me main section#like .likeList li .img {
+  margin-bottom: 3.333vw;
+}
+
+#me main section#like .likeList li .img img {
+  width: 100%;
+}
+
+#me main section#like .likeList li h3 {
+  margin-bottom: 3.333vw;
+}
+
+#me main section#like .likeList li p {
+  margin: 0;
+}
+
+#me main section#interested .note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#me main section#contact .wrap .frame {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+#me main section#contact .wrap .frame .box {
+  width: 280px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #111 1px solid;
+  margin-bottom: -1px;
+}
+
+#me main section#contact .wrap .frame .box.left {
+  background: #111;
+  color: #fff;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+  #me main {
+    width: 90%;
+  }
+  #me main section#profile .wrap {
+    flex-direction: column;
+  }
+  #me main section#profile .wrap .profileImg {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #me main section#profile .wrap .profileImg img {
+    width: 100%;
+    height: 460px;
+  }
+  #me main section#profile .wrap .txt {
+    width: 100%;
+  }
+  #me main section#like .likeList li {
+    width: 27.441vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #me main {
+    padding-top: calc(80px + 4.883vw);
+    width: 90%;
+  }
+  #me main section:first-child {
+    padding-top: 4.883vw;
+  }
+  #me main section#profile .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  #me main section#profile .wrap .profileImg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6.667vw;
+  }
+  #me main section#profile .wrap .profileImg img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  #me main section#profile .wrap .txt {
+    width: 100%;
+    text-align: left;
+  }
+  #me main section#profile .wrap .txt h3 {
+    font-size: 4.667vw;
+    margin-bottom: 3.333vw;
+  }
+  #me main section#profile .wrap .txt ul {
+    margin-bottom: 3.333vw;
+  }
+  #me main section#profile .wrap .txt ul:last-child {
+    margin-bottom: 0;
+  }
+  #me main section#profile .wrap .txt ul.otherList li {
+    line-height: 2;
+  }
+  #me main section#profile .wrap .txt ul .__enTxt {
+    font-weight: 500;
+  }
+  #me main section#profile .wrap .txt ul h4 {
+    font-size: 24px;
+    margin-bottom: 3.333vw;
+  }
+  #me main section#like .likeList {
+    flex-direction: column;
+  }
+  #me main section#like .likeList li {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 3.333vw;
+  }
+  #me main section#like .likeList li:last-child {
+    margin-bottom: 0;
+  }
+  #me main section#like .likeList li .img {
+    margin-bottom: 3.333vw;
+  }
+  #me main section#like .likeList li h3 {
+    margin-bottom: 3.333vw;
+  }
+  #me main section#like .likeList li p {
+    margin: 0;
+  }
+  #me main section#contact .wrap .frame {
+    flex-direction: column;
+    font-size: 20px;
+  }
+  #me main section#contact .wrap .frame .box {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 0;
+  }
+}
+
+#worksDetail header {
+  background: #111;
+}
+
+#worksDetail main {
+  padding-top: 125px;
+  background: #eee;
+}
+
+#worksDetail main section {
+  margin: 0 auto;
+  width: 80%;
+  padding: 25px 0;
+}
+
+#worksDetail main section .thumb {
+  margin-bottom: 40px;
+}
+
+#worksDetail main section .thumb img {
+  width: 100%;
+}
+
+#worksDetail main section p {
+  text-align: left;
+}
+
+#worksDetail main section ul {
+  text-align: left;
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+#worksDetail main section .mockUp {
+  margin-bottom: 40px;
+}
+
+#worksDetail main section .mockUp img {
+  width: 100%;
+}
+
+#worksDetail main section .capture ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+#worksDetail main section .capture ul li {
+  width: 25vw;
+}
+
+#worksDetail main section .capture ul li img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #worksDetail main section {
+    width: 90%;
+  }
+  #worksDetail main section .capture ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #worksDetail main section .capture ul li {
+    width: 28.32vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #worksDetail header {
+    background: #111;
+  }
+  #worksDetail main {
+    padding-top: calc(80px + 4.883vw);
+    background: #eee;
+  }
+  #worksDetail main section {
+    margin: 0 auto;
+    width: 90%;
+    padding: 4.883vw 0;
+  }
+  #worksDetail main section .thumb {
+    margin-bottom: 6.667vw;
+  }
+  #worksDetail main section .thumb img {
+    width: 100%;
+  }
+  #worksDetail main section p {
+    text-align: left;
+  }
+  #worksDetail main section ul {
+    text-align: left;
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 6.667vw;
+  }
+  #worksDetail main section .mockUp {
+    margin-bottom: 6.667vw;
+  }
+  #worksDetail main section .mockUp img {
+    width: 100%;
+  }
+  #worksDetail main section .capture ul li {
+    width: 26.667vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

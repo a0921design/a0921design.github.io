@@ -520,7 +520,6 @@ footer #copyright {
 
 #works main {
   padding-top: 12.5rem;
-  background: #eee;
 }
 
 #works main section {
@@ -549,6 +548,7 @@ footer #copyright {
 
 #works main section .row li img {
   width: 100%;
+  border: 1px solid #111;
 }
 
 #works main section .row li .title {
@@ -802,7 +802,6 @@ footer #copyright {
 
 #worksDetail main {
   padding-top: 12.5rem;
-  background: #eee;
 }
 
 #worksDetail main section {
@@ -817,6 +816,7 @@ footer #copyright {
 
 #worksDetail main section .thumb img {
   width: 100%;
+  border: 1px solid #111;
 }
 
 #worksDetail main section p {
@@ -836,6 +836,7 @@ footer #copyright {
 
 #worksDetail main section .mockUp img {
   width: 100%;
+  border: 1px solid #111;
 }
 
 #worksDetail main section .capture ul {
@@ -850,6 +851,7 @@ footer #copyright {
 
 #worksDetail main section .capture ul li img {
   width: 100%;
+  border: 1px solid #111;
 }
 
 @media screen and (max-width: 1024px) {

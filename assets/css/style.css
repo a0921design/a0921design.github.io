@@ -854,6 +854,24 @@ footer #copyright {
   border: 1px solid #111;
 }
 
+#worksDetail main section .designBase {
+  display: flex;
+  justify-content: space-between;
+}
+
+#worksDetail main section .designBase .design {
+  width: 28.125vw;
+}
+
+#worksDetail main section .designBase .basePic {
+  width: 46.875vw;
+}
+
+#worksDetail main section .designBase img {
+  width: 100%;
+  border: 1px solid #111;
+}
+
 @media screen and (max-width: 1024px) {
   #worksDetail main section {
     width: 90%;
@@ -864,6 +882,12 @@ footer #copyright {
   }
   #worksDetail main section .capture ul li {
     width: 28.32vw;
+  }
+  #worksDetail main section .designBase .design {
+    width: 31.543vw;
+  }
+  #worksDetail main section .designBase .basePic {
+    width: 52.539vw;
   }
 }
 
@@ -891,6 +915,16 @@ footer #copyright {
   }
   #worksDetail main section .capture ul li {
     width: 26.667vw;
+  }
+  #worksDetail main section .designBase {
+    display: flex;
+    justify-content: space-between;
+  }
+  #worksDetail main section .designBase .design {
+    width: 32vw;
+  }
+  #worksDetail main section .designBase .basePic {
+    width: 53.333vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

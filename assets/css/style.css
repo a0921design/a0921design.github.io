@@ -841,6 +841,7 @@ footer #copyright {
 
 #worksDetail main section .capture ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 0;
 }

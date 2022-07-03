@@ -839,6 +839,14 @@ footer #copyright {
   border: 1px solid #111;
 }
 
+#worksDetail main section .capture {
+  margin-bottom: 2.083vw;
+}
+
+#worksDetail main section .capture:last-child {
+  margin-bottom: 0;
+}
+
 #worksDetail main section .capture ul {
   display: flex;
   flex-wrap: wrap;
@@ -877,6 +885,9 @@ footer #copyright {
   #worksDetail main section {
     width: 90%;
   }
+  #worksDetail main section .capture {
+    margin-bottom: 3.32vw;
+  }
   #worksDetail main section .capture ul {
     display: flex;
     justify-content: space-between;
@@ -913,6 +924,9 @@ footer #copyright {
   }
   #worksDetail main section .mockUp img {
     width: 100%;
+  }
+  #worksDetail main section .capture {
+    margin-bottom: 5vw;
   }
   #worksDetail main section .capture ul li {
     width: 26.667vw;

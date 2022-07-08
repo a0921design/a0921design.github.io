@@ -1,26 +1,14 @@
 @charset "UTF-8";
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 601px) {
   .__bpPC {
     display: inline-block;
   }
-  .__bpTab, .__bpSP {
+  .__bpSP {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .__bpPC, .__bpSP {
-    display: none;
-  }
-  .__bpTab {
-    display: block;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .__bpTab {
-    display: none;
-  }
   .__bpSP {
     display: block;
   }
@@ -90,12 +78,6 @@ html, body {
   font-size: 10px;
 }
 
-@media screen and (max-width: 1024px) {
-  html, body {
-    font-size: 9px;
-  }
-}
-
 @media screen and (max-width: 600px) {
   html, body {
     font-size: 7px;
@@ -119,6 +101,10 @@ html h2, html h3, html h4, body h2, body h3, body h4 {
 html p, html li, body p, body li {
   font-size: 1.6rem;
   line-height: 2;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .__enTxt {
@@ -170,13 +156,10 @@ header .headerWrap nav ul a {
   background: #111;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
   header .headerWrap {
     width: 90%;
   }
-}
-
-@media screen and (max-width: 600px) {
   header .headerWrap nav {
     position: absolute;
     top: 50%;
@@ -191,6 +174,10 @@ header .headerWrap nav ul a {
     opacity: 0;
     transition: .5s;
   }
+  header .headerWrap nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
   header .headerWrap nav ul {
     flex-direction: column;
     align-items: center;
@@ -204,51 +191,52 @@ header .headerWrap nav ul a {
   header .headerWrap nav ul a {
     color: #111;
   }
-  header .headerWrap #navBtn {
-    width: 8vw;
-    height: 8vw;
-    position: relative;
+  header .headerWrap #toggle {
+    width: 4.8rem;
+    height: 4.8rem;
+    position: fixed;
+    top: 2.6rem;
+    right: 5%;
+    z-index: 9998;
     display: flex;
     justify-content: center;
     cursor: pointer;
     transition: .5s;
-    z-index: 9999;
   }
-  header .headerWrap #navBtn:hover {
-    opacity: 0.5;
+  header .headerWrap #toggle:hover {
+    opacity: 0.8;
   }
-  header .headerWrap #navBtn .line {
-    height: 0.333vw;
-    width: 6vw;
+  header .headerWrap #toggle span.line {
+    width: 4.8rem;
+    height: 0.3rem;
     background: #fff;
-    position: absolute;
+    z-index: 9999;
     transition: .5s;
+    border-radius: 0.2rem;
+    position: absolute;
   }
-  header .headerWrap #navBtn #line1 {
-    top: 21%;
+  header .headerWrap #toggle span.line#line1 {
+    top: 1.6rem;
   }
-  header .headerWrap #navBtn #line1.line1 {
-    background: #111;
+  header .headerWrap #toggle span.line#line1.line1 {
     transform: rotate(-405deg);
-    top: 48%;
-  }
-  header .headerWrap #navBtn #line2 {
-    top: 49%;
-  }
-  header .headerWrap #navBtn #line2.line2 {
-    opacity: 0;
-  }
-  header .headerWrap #navBtn #line3 {
-    bottom: 19%;
-  }
-  header .headerWrap #navBtn #line3.line3 {
+    top: 3.2rem;
     background: #111;
-    transform: rotate(405deg);
-    bottom: 49%;
   }
-  header .headerWrap .show {
-    visibility: visible;
-    opacity: 1;
+  header .headerWrap #toggle span.line#line2 {
+    top: 3.2rem;
+  }
+  header .headerWrap #toggle span.line#line2.line2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .headerWrap #toggle span.line#line3 {
+    top: 4.8rem;
+  }
+  header .headerWrap #toggle span.line#line3.line3 {
+    transform: rotate(405deg);
+    top: 3.2rem;
+    background: #111;
   }
 }
 
@@ -299,12 +287,6 @@ header .headerWrap nav ul a {
   font-weight: 400;
   margin-left: 0.4rem;
   letter-spacing: 0.05em;
-}
-
-@media screen and (max-width: 1024px) {
-  #headline #copy {
-    margin-left: 5%;
-  }
 }
 
 main {
@@ -398,18 +380,6 @@ footer #copyright {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1024px) {
-  footer .navArea {
-    width: 90%;
-  }
-  footer .navArea .logoTxt {
-    font-size: 32px;
-  }
-  footer #copyright {
-    font-size: 14px;
-  }
-}
-
 @media screen and (max-width: 600px) {
   footer {
     height: 46.667vw;
@@ -485,7 +455,7 @@ footer #copyright {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
   #index main section .worksWrap {
     flex-direction: column;
   }
@@ -493,20 +463,11 @@ footer #copyright {
     width: 100%;
   }
   #index main section .worksWrap li .linkTxt {
-    font-size: 5.859vw;
-  }
-  #index main section .profileImg {
-    width: 39.063vw;
-    margin: 0 auto 3.906vw auto;
-  }
-  #index main section .profileImg img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #index main section .worksWrap li .linkTxt {
     font-size: 10vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   #index main section .profileImg {
     width: 50vw;
@@ -565,17 +526,13 @@ footer #copyright {
   font-size: 3.6rem;
 }
 
-@media screen and (max-width: 1024px) {
-  #works main section {
-    width: 90%;
-  }
-  #works main section .row li {
-    width: 28.32vw;
-  }
-}
-
 @media screen and (max-width: 600px) {
   #works main {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #works main section {
     width: 100%;
   }
   #works main section .row {
@@ -718,32 +675,11 @@ footer #copyright {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1024px) {
-  #me main {
-    width: 90%;
-  }
-  #me main section#profile .wrap {
-    flex-direction: column;
-  }
-  #me main section#profile .wrap .profileImg {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-  #me main section#profile .wrap .profileImg img {
-    width: 100%;
-    height: 460px;
-  }
-  #me main section#profile .wrap .txt {
-    width: 100%;
-  }
-  #me main section#like .likeList li {
-    width: 27.441vw;
-  }
-}
-
 @media screen and (max-width: 600px) {
   #me main {
-    width: 90%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   #me main section#profile .wrap {
     display: flex;
@@ -754,11 +690,13 @@ footer #copyright {
   #me main section#profile .wrap .profileImg {
     width: 100%;
     height: auto;
+    margin-bottom: 2rem;
   }
   #me main section#profile .wrap .profileImg img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    border-radius: 50%;
   }
   #me main section#profile .wrap .txt {
     width: 100%;
@@ -780,6 +718,9 @@ footer #copyright {
     text-align: left;
     width: 100%;
     margin-bottom: 2rem;
+  }
+  #me main section#like .likeList li img {
+    border-radius: 50%;
   }
   #me main section#like .likeList li:last-child {
     margin-bottom: 0;
@@ -881,35 +822,17 @@ footer #copyright {
   border: 1px solid #111;
 }
 
-@media screen and (max-width: 1024px) {
-  #worksDetail main section {
-    width: 90%;
-  }
-  #worksDetail main section .capture {
-    margin-bottom: 3.32vw;
-  }
-  #worksDetail main section .capture ul {
-    display: flex;
-    justify-content: space-between;
-  }
-  #worksDetail main section .capture ul li {
-    width: 28.32vw;
-  }
-  #worksDetail main section .designBase .design {
-    width: 31.543vw;
-  }
-  #worksDetail main section .designBase .basePic {
-    width: 52.539vw;
-  }
-}
-
 @media screen and (max-width: 600px) {
   #worksDetail header {
     background: #111;
   }
+  #worksDetail main {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   #worksDetail main section {
-    margin: 0 auto;
-    width: 90%;
+    width: auto;
   }
   #worksDetail main section .thumb img {
     width: 100%;

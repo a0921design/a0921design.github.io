@@ -216,11 +216,11 @@ header .headerWrap nav ul a {
     position: absolute;
   }
   header .headerWrap #toggle span.line#line1 {
-    top: 0.8rem;
+    top: 0.7rem;
   }
   header .headerWrap #toggle span.line#line1.line1 {
     transform: rotate(-405deg);
-    top: 3.2rem;
+    top: 2.7rem;
     background: #111;
   }
   header .headerWrap #toggle span.line#line2 {
@@ -231,11 +231,11 @@ header .headerWrap nav ul a {
     visibility: hidden;
   }
   header .headerWrap #toggle span.line#line3 {
-    bottom: 0.6rem;
+    bottom: 0.4rem;
   }
   header .headerWrap #toggle span.line#line3.line3 {
     transform: rotate(405deg);
-    bottom: 1.2rem;
+    bottom: 1.8rem;
     background: #111;
   }
 }
@@ -273,6 +273,12 @@ header .headerWrap nav ul a {
   transform: translateY(-50%);
   margin-left: 10%;
   mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 600px) {
+  #headline #copy {
+    margin-left: 5%;
+  }
 }
 
 #headline #copy #mainCopy {

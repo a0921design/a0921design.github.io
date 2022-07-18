@@ -1,15 +1,27 @@
 @charset "UTF-8";
-@media screen and (min-width: 601px) {
-  .__bpPC {
-    display: inline-block;
+@media screen and (min-width: 1201px) {
+  .__pc {
+    display: block;
   }
-  .__bpSP {
+  .__sp {
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .__bpSP {
+@media screen and (max-width: 1200px) {
+  .__pc {
+    display: block;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .__pc {
+    display: none;
+  }
+  .__sp {
     display: block;
   }
 }
@@ -78,7 +90,13 @@ html, body {
   font-size: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   html, body {
     font-size: 7px;
   }
@@ -107,7 +125,7 @@ html p, html li, body p, body li {
   box-sizing: border-box;
 }
 
-.__enTxt {
+.__en {
   font-family: futura-pt, sans-serif;
 }
 
@@ -128,6 +146,12 @@ header .headerWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  header .headerWrap {
+    width: 90%;
+  }
 }
 
 header .headerWrap h1 {
@@ -156,7 +180,7 @@ header .headerWrap nav ul a {
   background: #111;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   header .headerWrap {
     width: 90%;
   }
@@ -275,7 +299,7 @@ header .headerWrap nav ul a {
   mix-blend-mode: difference;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   #headline #copy {
     margin-left: 5%;
   }
@@ -309,7 +333,7 @@ main section h2 {
   margin-bottom: 4rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   main section h2 {
     font-size: 10vw;
     margin-bottom: 6.667vw;
@@ -346,7 +370,6 @@ main section .box a:hover {
 
 footer {
   background: #111;
-  height: 40rem;
   font-weight: 600;
   color: #fff;
 }
@@ -358,6 +381,12 @@ footer .navArea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  footer .navArea {
+    width: 90%;
+  }
 }
 
 footer .navArea .logoTxt {
@@ -378,7 +407,8 @@ footer .navArea #fNav ul a {
 }
 
 footer #copyright {
-  height: 6rem;
+  height: 12rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,29 +416,20 @@ footer #copyright {
   font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
-  footer {
-    height: 46.667vw;
-  }
+@media screen and (max-width: 767px) {
   footer .navArea {
     width: 100%;
-    height: 35vw;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    position: relative;
   }
-  footer .navArea .logoTxt {
-    font-size: 5.333vw;
-    margin-bottom: 8.333vw;
-  }
-  footer .navArea #fNav {
-    font-size: 4vw;
-    margin-bottom: 8.333vw;
-  }
-  footer #copyright {
-    height: 11.667vw;
-    font-size: 2.667vw;
-    align-items: flex-start;
+  footer .navArea::after {
+    content: '';
+    border-bottom: #b9b9b9 1px solid;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -416,13 +437,13 @@ footer #copyright {
   margin-bottom: 0;
 }
 
-#index main section#purpose p .__enTxt {
+#index main section#purpose p .__en {
   font-size: 20px;
   font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
-  #index main section#purpose p .__enTxt {
+@media screen and (max-width: 767px) {
+  #index main section#purpose p .__en {
     font-size: 3.333vw;
   }
 }
@@ -461,7 +482,7 @@ footer #copyright {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   #index main section .worksWrap {
     flex-direction: column;
   }
@@ -495,6 +516,12 @@ footer #copyright {
   width: 80%;
 }
 
+@media screen and (max-width: 1200px) {
+  #works main section {
+    width: 90%;
+  }
+}
+
 #works main section p {
   margin-bottom: 2.5rem;
 }
@@ -513,6 +540,12 @@ footer #copyright {
   width: 25vw;
 }
 
+@media screen and (max-width: 1200px) {
+  #works main section .row li {
+    width: 28vw;
+  }
+}
+
 #works main section .row li img {
   width: 100%;
   border: 1px solid #111;
@@ -522,6 +555,7 @@ footer #copyright {
   margin-top: 2rem;
   text-align: left;
   font-weight: 500;
+  font-size: 2rem;
 }
 
 #works main section #web, #works main section #other {
@@ -532,7 +566,7 @@ footer #copyright {
   font-size: 3.6rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   #works main {
     width: 100%;
     padding-left: 5%;
@@ -567,6 +601,12 @@ footer #copyright {
   padding-top: 12.5rem;
   width: 80%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  #me main {
+    width: 90%;
+  }
 }
 
 #me main section:first-child {
@@ -618,7 +658,7 @@ footer #copyright {
   line-height: 2;
 }
 
-#me main section#profile .wrap .txt ul .__enTxt {
+#me main section#profile .wrap .txt ul .__en {
   font-weight: 500;
 }
 
@@ -681,7 +721,7 @@ footer #copyright {
   font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   #me main {
     width: 100%;
     padding-left: 5%;
@@ -714,7 +754,7 @@ footer #copyright {
   #me main section#profile .wrap .txt ul.otherList li {
     line-height: 2;
   }
-  #me main section#profile .wrap .txt ul .__enTxt {
+  #me main section#profile .wrap .txt ul .__en {
     font-weight: 500;
   }
   #me main section#like .likeList {
@@ -755,6 +795,12 @@ footer #copyright {
   margin: 0 auto;
   width: 80%;
   padding: 2.5rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  #worksDetail main section {
+    width: 90%;
+  }
 }
 
 #worksDetail main section .thumb {
@@ -805,6 +851,12 @@ footer #copyright {
   width: 25vw;
 }
 
+@media screen and (max-width: 1200px) {
+  #worksDetail main section .capture ul li {
+    width: 28vw;
+  }
+}
+
 #worksDetail main section .capture ul li img {
   width: 100%;
   border: 1px solid #111;
@@ -828,7 +880,7 @@ footer #copyright {
   border: 1px solid #111;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   #worksDetail header {
     background: #111;
   }

@@ -83,7 +83,7 @@ html, body {
   height: 100%;
   width: 100%;
   background: #fff;
-  color: #111;
+  color: #444;
   font-family: source-han-sans-cjk-ja,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   line-height: 1;
   font-weight: 300;
@@ -104,7 +104,7 @@ html, body {
 
 html a, body a {
   text-decoration: none;
-  color: #111;
+  color: #444;
 }
 
 html a:hover, body a:hover {
@@ -114,6 +114,7 @@ html a:hover, body a:hover {
 
 html h2, html h3, html h4, body h2, body h3, body h4 {
   font-weight: 500;
+  color: #111;
 }
 
 html p, html li, body p, body li {
@@ -182,7 +183,9 @@ header .headerWrap nav ul a {
 
 @media screen and (max-width: 767px) {
   header .headerWrap {
-    width: 90%;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   header .headerWrap nav {
     position: absolute;
@@ -210,17 +213,17 @@ header .headerWrap nav ul a {
     height: 100%;
   }
   header .headerWrap nav ul li {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   header .headerWrap nav ul a {
-    color: #111;
+    color: #444;
   }
   header .headerWrap #toggle {
     width: 4.8rem;
     height: 4.8rem;
     position: fixed;
     top: 2.6rem;
-    right: 5%;
+    right: 3%;
     z-index: 9998;
     display: flex;
     justify-content: center;
@@ -245,7 +248,7 @@ header .headerWrap nav ul a {
   header .headerWrap #toggle span.line#line1.line1 {
     transform: rotate(-405deg);
     top: 2.7rem;
-    background: #111;
+    background: #444;
   }
   header .headerWrap #toggle span.line#line2 {
     top: 50%;
@@ -260,7 +263,7 @@ header .headerWrap nav ul a {
   header .headerWrap #toggle span.line#line3.line3 {
     transform: rotate(405deg);
     bottom: 1.8rem;
-    background: #111;
+    background: #444;
   }
 }
 
@@ -305,6 +308,12 @@ header .headerWrap nav ul a {
   }
 }
 
+@media screen and (max-width: 767px) {
+  #headline #copy {
+    margin-left: 3%;
+  }
+}
+
 #headline #copy #mainCopy {
   line-height: 1.3;
   font-size: 6.6rem;
@@ -316,7 +325,7 @@ header .headerWrap nav ul a {
   font-size: 1.6rem;
   font-weight: 400;
   margin-left: 0.4rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.4rem;
 }
 
 main {
@@ -331,13 +340,6 @@ main section {
 main section h2 {
   font-size: 6rem;
   margin-bottom: 4rem;
-}
-
-@media screen and (max-width: 767px) {
-  main section h2 {
-    font-size: 10vw;
-    margin-bottom: 6.667vw;
-  }
 }
 
 main section h3 {
@@ -393,13 +395,13 @@ footer .navArea .logoTxt {
   font-size: 3.6rem;
 }
 
-footer .navArea #fNav {
-  font-size: 1.6rem;
-}
-
 footer .navArea #fNav ul {
   display: flex;
   gap: 4rem;
+}
+
+footer .navArea #fNav ul li {
+  font-size: 2rem;
 }
 
 footer .navArea #fNav ul a {
@@ -438,14 +440,8 @@ footer #copyright {
 }
 
 #index main section#purpose p .__en {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
-}
-
-@media screen and (max-width: 767px) {
-  #index main section#purpose p .__en {
-    font-size: 3.333vw;
-  }
 }
 
 #index main section .worksWrap {
@@ -473,8 +469,8 @@ footer #copyright {
 }
 
 #index main section .profileImg {
-  width: 400px;
-  margin: 0 auto 40px auto;
+  width: 40rem;
+  margin: 0 auto 4rem auto;
 }
 
 #index main section .profileImg img {
@@ -491,14 +487,9 @@ footer #copyright {
   }
   #index main section .worksWrap li .linkTxt {
     font-size: 10vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   #index main section .profileImg {
     width: 50vw;
-    margin: 0 auto 6.667vw auto;
   }
 }
 
@@ -566,11 +557,15 @@ footer #copyright {
   font-size: 3.6rem;
 }
 
+#works main section #other .row {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 767px) {
   #works main {
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   #works main section {
     width: 100%;
@@ -620,24 +615,22 @@ footer #copyright {
 }
 
 #me main section#profile .wrap .profileImg {
-  width: 39.583vw;
+  width: 36%;
   height: auto;
 }
 
 #me main section#profile .wrap .profileImg img {
   width: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  height: 78rem;
+  border-radius: 50%;
 }
 
 #me main section#profile .wrap .txt {
-  width: 37.5vw;
+  width: 60%;
   text-align: left;
 }
 
 #me main section#profile .wrap .txt h3 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   margin-bottom: 2rem;
 }
 
@@ -654,6 +647,10 @@ footer #copyright {
   margin-bottom: 0;
 }
 
+#me main section#profile .wrap .txt ul.toolList li {
+  line-height: 1;
+}
+
 #me main section#profile .wrap .txt ul.otherList li {
   line-height: 2;
 }
@@ -664,7 +661,7 @@ footer #copyright {
 
 #me main section#profile .wrap .txt ul h4 {
   font-size: 2.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #me main section#like .likeList {
@@ -677,6 +674,12 @@ footer #copyright {
   width: 25vw;
 }
 
+@media screen and (max-width: 1200px) {
+  #me main section#like .likeList li {
+    width: 28vw;
+  }
+}
+
 #me main section#like .likeList li .img {
   margin-bottom: 2rem;
 }
@@ -686,6 +689,7 @@ footer #copyright {
 }
 
 #me main section#like .likeList li h3 {
+  line-height: 1;
   margin-bottom: 2rem;
 }
 
@@ -724,8 +728,8 @@ footer #copyright {
 @media screen and (max-width: 767px) {
   #me main {
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   #me main section#profile .wrap {
     display: flex;
@@ -736,13 +740,7 @@ footer #copyright {
   #me main section#profile .wrap .profileImg {
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
-  }
-  #me main section#profile .wrap .profileImg img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 50%;
+    margin-bottom: 4rem;
   }
   #me main section#profile .wrap .txt {
     width: 100%;
@@ -886,8 +884,8 @@ footer #copyright {
   }
   #worksDetail main {
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   #worksDetail main section {
     width: auto;

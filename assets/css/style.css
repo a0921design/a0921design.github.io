@@ -184,8 +184,8 @@ header .headerWrap nav ul a {
 @media screen and (max-width: 767px) {
   header .headerWrap {
     width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   header .headerWrap nav {
     position: absolute;
@@ -223,7 +223,7 @@ header .headerWrap nav ul a {
     height: 4.8rem;
     position: fixed;
     top: 2.6rem;
-    right: 3%;
+    right: 5%;
     z-index: 9998;
     display: flex;
     justify-content: center;
@@ -305,12 +305,6 @@ header .headerWrap nav ul a {
 @media screen and (max-width: 1200px) {
   #headline #copy {
     margin-left: 5%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #headline #copy {
-    margin-left: 3%;
   }
 }
 
@@ -435,6 +429,14 @@ footer #copyright {
   }
 }
 
+@media screen and (max-width: 767px) {
+  #index main section#purpose {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
 #index main section#purpose p {
   margin-bottom: 0;
 }
@@ -468,12 +470,20 @@ footer #copyright {
   color: #fff;
 }
 
-#index main section .profileImg {
+@media screen and (max-width: 767px) {
+  #index main section#indexMe {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+#index main section#indexMe .profileImg {
   width: 40rem;
   margin: 0 auto 4rem auto;
 }
 
-#index main section .profileImg img {
+#index main section#indexMe .profileImg img {
   width: 100%;
   border-radius: 50%;
 }
@@ -564,8 +574,8 @@ footer #copyright {
 @media screen and (max-width: 767px) {
   #works main {
     width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   #works main section {
     width: 100%;
@@ -632,6 +642,16 @@ footer #copyright {
 #me main section#profile .wrap .txt h3 {
   font-size: 3.2rem;
   margin-bottom: 2rem;
+  position: relative;
+}
+
+#me main section#profile .wrap .txt h3::after {
+  content: '';
+  border-bottom: #444 1px solid;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
 }
 
 #me main section#profile .wrap .txt p {
@@ -728,8 +748,8 @@ footer #copyright {
 @media screen and (max-width: 767px) {
   #me main {
     width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   #me main section#profile .wrap {
     display: flex;
@@ -884,8 +904,8 @@ footer #copyright {
   }
   #worksDetail main {
     width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   #worksDetail main section {
     width: auto;
